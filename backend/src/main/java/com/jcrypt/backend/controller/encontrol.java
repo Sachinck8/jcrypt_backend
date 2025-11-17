@@ -34,27 +34,27 @@ public class encontrol {
         return aesEncryptionService.encrypt(request);
     }
 
-    @PostMapping("/aes/decrypt", produces = "application/json")
+    @PostMapping(value = "/aes/decrypt", produces = "application/json")
     public EncryptResponse decryptAES(@RequestBody EncryptRequest request) throws Exception{
         return aesEncryptionService.decrypt(request);
     }
 
-    @PostMapping("/des/encrypt", produces = "application/json")
+    @PostMapping(value = "/des/encrypt", produces = "application/json")
     public EncryptResponse encryptDES(@RequestBody EncryptRequest request) throws Exception{
         return desEncryptionService.encrypt(request);
     }
 
-    @PostMapping("/des/decrypt", produces = "application/json")
+    @PostMapping(value = "/des/decrypt", produces = "application/json")
     public EncryptResponse decryptDES(@RequestBody EncryptRequest request) throws Exception{
         return desEncryptionService.decrypt(request);
     }
 
-    @PostMapping("/rsa/encrypt", produces = "application/json")
+    @PostMapping(value = "/rsa/encrypt", produces = "application/json")
     public EncryptResponse encryptRSA(@RequestBody EncryptRequest request) throws Exception{
         return rsaEncryptionService.encrypt(request);
     }
 
-    @PostMapping("/rsa/decrypt", produces = "application/json")
+    @PostMapping(value = "/rsa/decrypt", produces = "application/json")
     public EncryptResponse decryptRSA(@RequestBody EncryptRequest request) throws Exception{
         return rsaEncryptionService.decrypt(request);
     }

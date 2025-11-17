@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 
 public class KeyResponse {
     private String privateKeyBase64;
-    private String PublicKeyBase64;
+    private String publicKeyBase64;
     private String secretKeyBase64;
 }
