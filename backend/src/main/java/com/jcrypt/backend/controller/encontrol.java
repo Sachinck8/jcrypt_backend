@@ -29,7 +29,7 @@ public class encontrol {
         this.rsaEncryptionService=rsaEncryptionService;
     }
 
-    @PostMapping("/aes/encrypt", produces = "application/json")
+    @PostMapping(value = "/aes/encrypt", produces = "application/json")
     public EncryptResponse encryptAES(@RequestBody EncryptRequest request) throws Exception{
         return aesEncryptionService.encrypt(request);
     }
