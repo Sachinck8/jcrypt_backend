@@ -15,6 +15,9 @@ import com.jcrypt.backend.dto.EncryptResponse;
 public class AESEncryptionService {
 
     public EncryptResponse encrypt(EncryptRequest request) throws Exception{
+        if (request.getMessage() == null || request.getBase64key() == null) {
+        throw new IllegalArgumentException("message and base64key cannot be null");
+    }
         byte[] decodedKey = Base64.getDecoder().decode(request.getBase64key());
 
         SecretKey secretKey = new SecretKeySpec(decodedKey, 0,decodedKey.length ,"AES");
@@ -31,6 +34,9 @@ public class AESEncryptionService {
 
 
     public EncryptResponse decrypt(EncryptRequest request) throws Exception{
+        if (request.getMessage() == null || request.getBase64key() == null) {
+        throw new IllegalArgumentException("message and base64key cannot be null");
+    }
         byte[] decodedKey = Base64.getDecoder().decode(request.getBase64key());
 
         SecretKey secretKey = new SecretKeySpec(decodedKey,0, decodedKey.length, "AES");

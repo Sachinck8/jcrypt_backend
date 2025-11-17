@@ -19,6 +19,9 @@ import com.jcrypt.backend.dto.KeyResponse;
 public class RSAEncryptionService {
 
     public EncryptResponse encrypt(EncryptRequest request) throws Exception{
+        if (request.getMessage() == null || request.getBase64key() == null) {
+        throw new IllegalArgumentException("message and base64key cannot be null");
+    }
         byte[] decodedKey = Base64.getDecoder().decode(request.getBase64key());
         X509EncodedKeySpec keySpec = new X509EncodedKeySpec(decodedKey);
         KeyFactory keyFactory = KeyFactory.getInstance("RSA");
@@ -31,6 +34,9 @@ public class RSAEncryptionService {
     } 
 
     public EncryptResponse decrypt(EncryptRequest request) throws Exception{
+        if (request.getMessage() == null || request.getBase64key() == null) {
+        throw new IllegalArgumentException("message and base64key cannot be null");
+    }
         byte[] decodedKey = Base64.getDecoder().decode(request.getBase64key());
         PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(decodedKey);
         KeyFactory keyFactory = KeyFactory.getInstance("RSA");
