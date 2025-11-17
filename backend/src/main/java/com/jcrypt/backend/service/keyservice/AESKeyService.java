@@ -14,8 +14,7 @@ public class AESKeyService{
    public KeyResponse generateAESKey() throws Exception{
       SecretKey key = CryptoKeyGenerater.generateAESKey(128);
       String encodedKey = Base64.getEncoder().encodeToString(key.getEncoded());
-      return KeyResponse.builder()
-        .secretKeyBase64(encodedKey)
-        .build();
+      return new KeyResponse(null, null, encodedKey);
+
    }
 }

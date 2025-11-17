@@ -14,8 +14,6 @@ public class DESKeyService {
     public KeyResponse generateDESKey() throws Exception{
       SecretKey key = CryptoKeyGenerater.generateDESKey();
       String encodedKey = Base64.getEncoder().encodeToString(key.getEncoded());
-      return KeyResponse.builder()
-        .secretKeyBase64(encodedKey)
-        .build();
-   }
+      return new KeyResponse(null, null, encodedKey);
+
 }
