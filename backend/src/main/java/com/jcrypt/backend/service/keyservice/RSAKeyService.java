@@ -15,6 +15,9 @@ public class RSAKeyService {
         KeyPair keyPair = CryptoKeyGenerater.generateRSAKey(2048);
         String publicKey = Base64.getEncoder().encodeToString(keyPair.getPublic().getEncoded());
         String privateKey = Base64.getEncoder().encodeToString(keyPair.getPrivate().getEncoded());
-        return new KeyResponse(publicKey, privateKey, null);
+        return KeyResponse.builder()
+        .privateKeyBase64(privateKey)
+        .PublicKeyBase64(publicKey)
+        .build();
     }
 }
