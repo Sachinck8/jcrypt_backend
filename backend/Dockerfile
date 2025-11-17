@@ -7,7 +7,7 @@ COPY backend/pom.xml .
 RUN mvn dependency:go-offline -B
 
 # Copy the rest of the project and build
-COPY . .
+COPY backend/. .
 RUN mvn clean package -DskipTests
 
 # ---------- Run Stage ----------
