@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jcrypt.backend.service.encryptionservice.DESEncryptionService;
 import com.jcrypt.backend.service.encryptionservice.RSAEncryptionService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 import com.jcrypt.backend.dto.EncryptRequest;
 import com.jcrypt.backend.dto.EncryptResponse;
