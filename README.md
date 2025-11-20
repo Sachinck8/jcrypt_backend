@@ -9,7 +9,7 @@ Your project is fully deployed and accessible online:
 
 👉 Live API Base URL:
 
-https://jcrypt-backend.onrender.com
+https://jcrypt-backend.onrender.com/swwager-ui/index.html
 
 
 ⭐ Features
@@ -66,7 +66,7 @@ Use your Render URL + endpoints below.
 
 Example:
 
-https://jcrypt_backend.onrender.com/aes/key
+https://jcrypt_backend.onrender.com/swwager-ui/index.html/aes/key
 
 
 ---
@@ -164,7 +164,7 @@ Sachin Kshirsagar
 Java Backend Developer
 
 🔗 GitHub: https://github.com/sachinck8
-🌐 Live API: (https://jcrypt-backend.onrender.com)
+🌐 Live API: (https://jcrypt-backend.onrender.com/swwager-ui/index.html)
 💼 Open to Backend / Java roles
 
 
